@@ -1,0 +1,219 @@
+body {
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+#app {
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);
+    /* grid-template-columns:  */
+    color: black;
+    justify-content: center;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    padding-bottom: 50px;
+}
+
+#app::before {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 100%;
+    background-image: url(images/photo-1499346030926-9a72daac6c63.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(.5);
+    -webkit-filter: brightness(.5);
+    z-index: -1;
+    background-attachment: fixed;
+}
+
+.entry {
+    background: rgba(59, 74, 107, .4);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.headline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+.fl {
+    display: flex;
+    justify-content: space-between;
+    max-height: 120px;
+    overflow: hidden;
+}
+
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+
+label {
+    display: block;
+    font-size: 27px;
+}
+
+input {
+    display: block;
+    height: 60px;
+    width: 320px;
+    background: rgba(59, 74, 107, .4);
+    ;
+    color: white;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    padding-left: 20px;
+}
+
+button {
+    width: 100%;
+    height: 100px;
+    background: #3b4a6b;
+    color: white;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+}
+
+
+/* Reset style for HTML element on active to have no border*/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+/* Style for Placeholder Text*/
+
+::placeholder {
+    /* Firefox, Chrome, Opera */
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* .entryHolder div {
+    width: 50%;
+} */
+
+.icon-img {
+    text-align: center;
+    background-color: rgba(172, 178, 190, 0.4);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding-bottom: 1px;
+    padding-inline: 20px;
+    margin-top: 25px;
+}
+
+.icon-img h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-inline: 10px;
+}
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.results div {
+    min-width: 25%;
+}
+
+#zipErorr {
+    text-align: center;
+}
+
+
+/* @media (min-width:500px) {} */
+
+@media (max-width:1000px) {
+    #app {
+        height: unset;
+    }
+    .headline {
+        font-size: 53px;
+        padding-inline: 20px;
+        margin-block: 50px;
+        font-weight: 600;
+        margin-bottom: 100px;
+    }
+    .fl {
+        max-height: unset;
+        flex-direction: column;
+        justify-content: unset;
+        margin-inline: 50px;
+        margin-bottom: 50px;
+    }
+    label {
+        margin-bottom: 20px;
+        font-size: 50px;
+    }
+    input {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 120px;
+        font-size: 50px;
+    }
+    button {
+        font-size: 50px;
+        width: auto;
+        margin-inline: 50px;
+    }
+    .icon-img img {
+        width: 300px;
+    }
+    .icon-img h4 {
+        font-size: 36px;
+    }
+    .results {
+        flex-direction: row;
+    }
+    .results div {
+        font-size: 40px;
+    }
+    .entry {
+        margin-inline: 50px;
+    }
+}

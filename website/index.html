@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <div class="holder headline">
+            The weather now in the United States
+        </div>
+        <div class="fl">
+            <div class="holder zip">
+                <label for="zip">Enter Zipcode here</label>
+                <input type="text" id="zip" placeholder="  Enter zip code here">
+            </div>
+            <div class="holder feel">
+                <label for="feelings">How are you feeling today?</label>
+                <input type="text" class="myInput" id="feelings" placeholder="  Enter your feelings here"></input>
+
+            </div>
+
+        </div>
+        <button id="generate" type="submit"> Weather Now </button>
+        <div class="holder entry">
+
+            <div id="entryHolder">
+                <h2 id="zipErorr"></h2>
+                <div class="results">
+
+                    <div id="temp"></div>
+                    <div id="feels_like"></div>
+                    <div id="temp_max"></div>
+                    <div id="temp_min"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+
+</body>
+
+</html>
